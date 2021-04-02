@@ -1,5 +1,5 @@
 :spiral_calendar: April 2, 2021 8:45-11:45am ET April 9, 2021  1:30-4:30pm ET  
-:pin:             EKU / Zoom  
+:pushpin:             EKU / Zoom  
 :writing_hand:    [register](https://eku.zoom.us/meeting/register/tJEsduqtqz4oGtAhcHSNhUNYQxCCeeH9ioJg)  
 
 -----
