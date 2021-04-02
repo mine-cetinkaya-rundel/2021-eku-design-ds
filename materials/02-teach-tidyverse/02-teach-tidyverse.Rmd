@@ -519,6 +519,9 @@ pivot_longer(
 .your-turn[
 ### 02 - Teach the tidyverse / `pivot.Rmd`
 
+- Go to [bit.ly/design-ds-eku](http://bit.ly/design-ds-eku) to join the RStudio Cloud workspace for this workshop
+- Start the **assignment** called **02 - Teaching the tidyverse**
+- Open the R Markdown document called `pivot.Rmd`, knit the document, view the result
 - Convert the data from wide format to long format.
 - **Stretch goal:** Convert the back to wide format from long format.
 ]
@@ -657,7 +660,10 @@ class: middle
 ---
 
 .your-turn[
-Convert all factor variables in `evals` to characters. Keep in mind that this should be introductory audience friendly, if possible. For any function you choose, think about how you would introduce it to your students.
+- Go to [bit.ly/design-ds-eku](http://bit.ly/design-ds-eku) to join the RStudio Cloud workspace for this workshop
+- Start the **assignment** called **02 - Teaching the tidyverse**
+- Open the R Markdown document called `evals.Rmd`, knit the document, view the result
+- Convert all factor variables in `evals` to characters. Keep in mind that this should be introductory audience friendly, if possible. For any function you choose, think about how you would introduce it to your students.
 ]
 
 ```{r echo=FALSE}
