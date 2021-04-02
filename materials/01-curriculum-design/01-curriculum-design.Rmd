@@ -1,6 +1,6 @@
 ---
 title: "01 <br> curriculum design"
-subtitle: "`r emo::ji('cake')` start with cake! <br> `r emo::ji('link')` [rstd.io/design-ds-class](https://rstd.io/design-ds-class)"
+subtitle: "`r emo::ji('cake')` start with cake! <br> `r emo::ji('link')` [bit.ly/design-ds-eku-web](http://bit.ly/design-ds-eku-web)"
 author: "<br> dr. mine çetinkaya-rundel"
 date: "2 april 2021"
 output:
