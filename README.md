@@ -1,6 +1,6 @@
-:spiral_calendar: April 2, 2021 8:45-11:45am ET April 9, 2021  1:30-4:30pm ET 
-:pin:             EKU / Zoom 
-:writing_hand:    [register](https://eku.zoom.us/meeting/register/tJEsduqtqz4oGtAhcHSNhUNYQxCCeeH9ioJg)
+:spiral_calendar: April 2, 2021 8:45-11:45am ET April 9, 2021  1:30-4:30pm ET  
+:pin:             EKU / Zoom  
+:writing_hand:    [register](https://eku.zoom.us/meeting/register/tJEsduqtqz4oGtAhcHSNhUNYQxCCeeH9ioJg)  
 
 -----
 
@@ -26,10 +26,10 @@ The RStudio Cloud workspace is at  [rstd.io/design-ds-cloud](https://rstd.io/des
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 08:45 - 09:00 | [Welcome](https://rstudio-conf-2020.github.io/design-ds-classroom/materials/00-welcome/slides/00-welcome.html#1)  |
-| 09:00 - 10:00 | [Curriculum design](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/01-curriculum-design) |
+| 08:45 - 09:00 | Welcome  |
+| 09:00 - 10:00 | [Curriculum design](https://github.com/mine-cetinkaya-rundel/2021-eku-design-ds/blob/master/materials/01-curriculum-design/01-curriculum-design.html) |
 | 10:00 - 10:15 | :coffee: *Break*   |
-| 10:15 - 11:00 | [Teaching the tidyverse]() |
+| 10:15 - 11:00 | [Teaching the tidyverse](https://github.com/mine-cetinkaya-rundel/2021-eku-design-ds/blob/master/materials/02-teach-tidyverse/02-teach-tidyverse.html) |
 | 11:00 - 11:45 | [Computing infrastructure with RStudio Cloud]() |
 
 ### Day 2 - Friday, April 9
