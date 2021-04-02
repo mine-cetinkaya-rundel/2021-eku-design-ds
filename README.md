@@ -18,7 +18,7 @@ Curriculum, workflow, and infrastructure design for teaching data science with R
 
 ## RStudio Cloud
 
-The RStudio Cloud workspace is at  [rstd.io/design-ds-cloud](https://rstd.io/design-ds-cloud).
+The RStudio Cloud workspace is at  [bit.ly/design-ds-eku](https://bit.ly/design-ds-eku).
 
 ## Schedule
 
