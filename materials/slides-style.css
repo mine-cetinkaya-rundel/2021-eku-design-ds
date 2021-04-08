@@ -60,6 +60,11 @@ h1, h2, h3 {
   margin-left: 5px;
 }
 
+h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 /* Font colors */
 .pink {
   color: var(--peach-quartz);
@@ -97,6 +102,18 @@ h1, h2, h3 {
   font-family: 'Gochi Hand', cursive;
   color: var(--provence);
   font-size: 125%;
+}
+.huge-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 600%;
+  font-weight: bold;
+  color: var(--classic-blue);
+}
+.huge-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1700%;
+  font-weight: bold;
+  color: var(--baby-blue);
 }
 
 /*Alternative two-column layouts*/
@@ -200,10 +217,10 @@ ul{
 }
 .your-turn:before{
   content: "Your turn!";
-  font-size: 150%;
+  font-size: 120%;
   font-weight: bold;
   color: var(--stucco);
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .alert {
   border-right: solid 5px var(--peach-quartz);
