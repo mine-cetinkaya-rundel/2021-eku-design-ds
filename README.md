@@ -38,7 +38,8 @@ The RStudio Cloud workspace is at  [bit.ly/design-ds-eku](https://bit.ly/design-
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 13:30 - 13:45 | Welcome + recap  |
+| 13:30 - 13:40 | Welcome + recap  |
+| 13:40 - 14:30 | [Computing infrastructure with RStudio Cloud](https://mine-cetinkaya-rundel.github.io/2021-eku-design-ds/materials/03-rstudio-cloud/03-rstudio-cloud.html) |
 | 13:45 - 14:30 | [Reproducible workflows: R Markdown]() |
 | 14:30 - 15:15 | [Interactivity and immediate feedback]() |
 | 15:15 - 15:30 | :coffee: *Break*   |
