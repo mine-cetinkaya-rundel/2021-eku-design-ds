@@ -1,12 +1,12 @@
 ---
-title: "> 03 <br> > computing infrastructure"
-subtitle: "`r emo::ji('dizzy')` with RStudio Cloud! <br> `r emo::ji('link')` [rstd.io/design-ds-class](https://rstd.io/design-ds-class)"
+title: "03 <br> > computing infrastructure"
+subtitle: "`r emo::ji('dizzy')` with RStudio Cloud! <br> `r emo::ji('link')` [bit.ly/design-ds-eku-web](http://bit.ly/design-ds-eku-web)"
 author: "dr. mine çetinkaya-rundel"
-date: "27 jan 2020"
+date: "9 april 2021"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["../../xaringan-themer.css", "../../slides-style.css"]
+    css: ["../xaringan-themer.css", "../slides-style.css"]
     nature:
       highlightStyle: solarized-light
       highlightLines: true
@@ -16,13 +16,32 @@ output:
         <div class="progress-bar-container">
           <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
           </div>
-        </div>`
+        </div>
 ---
 
-```{r child = "../../setup.Rmd"}
-```
+```{r setup, include = FALSE}
+# R options
+options(htmltools.dir.version = FALSE)
 
-```{r load-packages, message=FALSE, echo=FALSE}
+# figure height, width, dpi
+knitr::opts_chunk$set(echo = TRUE, 
+                      fig.width = 5, 
+                      fig.height = 3,
+                      dpi = 300)
+
+# fontawesome
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+
+# magick
+dev.off <- function(){
+  invisible(grDevices::dev.off())
+}
+
+# set seed
+set.seed(1234)
+
+# packages
+library(countdown)
 library(tidyverse)
 library(broom)
 library(scales)
@@ -89,13 +108,17 @@ knitr::include_graphics("img/cloud.png")
 
 ---
 
-```{r echo=FALSE}
+class: middle, center
+
+```{r echo=FALSE, out.width = "100%"}
 knitr::include_graphics("img/rstudio-ide.png")
 ```
 
 ---
 
-```{r echo=FALSE}
+class: middle, center
+
+```{r echo=FALSE, out.width = "100%"}
 knitr::include_graphics("img/rstudio-cloud.png")
 ```
 
@@ -126,16 +149,6 @@ knitr::include_graphics("img/rstudio-cloud.png")
 
 ---
 
-.your-turn[
-Log out of RStudio Cloud and log back in.
-]
-
-```{r echo=FALSE}
-countdown(minutes = 3)
-```
-
----
-
 ## Workspaces
 
 - When you create an account on RStudio Cloud you get a workspace of your own
@@ -163,7 +176,7 @@ countdown(minutes = 3)
 - A new project from Git Repo in RStudio Cloud
 - is creates (cloning) a project from a Git repository RStudio
 
-----
+---
 
 class: middle, inverse
 
@@ -321,16 +334,6 @@ knitr::include_graphics("img/permissions.png")
 
 ---
 
-## Capacity
-
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("img/capacity.png")
-```
-
-.right[ .large[ `r emo::ji("woman_teacher")`  ]  ]
-
----
-
 .your-turn[
 
 #### You’re the instructor:
@@ -427,14 +430,28 @@ knitr::include_graphics("img/git-integration.png")
 
 class: middle, inverse
 
-# On the horizon...
+# RStudio Cloud in **your** classroom
+
+---
+
+## Pricing
+
+
+
+class: center
+
+.large[.hand-blue[
+[rstudio.cloud/plans](https://rstudio.cloud/plans)
+]]
+
+<iframe width="900" height="450" src="https://rstudio.cloud/plans/free/" frameborder="0" style="background:white;"></iframe>  
 
 ---
 
 ## Institution accounts
 
 ```{r echo=FALSE}
-knitr::include_graphics("img/institution-accounts.png")
+knitr::include_graphics("img/institution-account.png")
 ```
 
 ---
@@ -449,13 +466,6 @@ knitr::include_graphics("img/dashboard.png")
 
 ---
 
-## `r emo::ji("parcel")` rscloud
-
-- A new package for managing RStudio Cloud spaces with R: [github.com/rstudio/rscloud](https://github.com/rstudio/rscloud)
-- Requires an API key, which any instructor can request (via email for now, but soon in the UI as well)
-
----
-
 class: middle, inverse
 
 # Parting remarks
@@ -464,50 +474,8 @@ class: middle, inverse
 
 ## Tips
 
-- Each project is allocated 1GB of RAM
+- Each project is allocated 1GB of RAM (but you can increase this!)
   - Test things out before assignments involving large datasets 
 
 - What your students see is not always what you see
   - Create a secondary account and add as a student
-  
----
-
-## Primers
-
-.pull-left[
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("img/primers.png")
-```
-]
-.pull-right[
-[rstudio.cloud/learn/primers](https://rstudio.cloud/learn/primers)
-
-- Free primers made with the **learnr** package
-- Companion to R4DS by Grolemund and Wickham
-]
-
----
-
-class: middle
-
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("img/wip-beta.png")
-```
-
----
-
-class: middle
-
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("img/free-lunch.png")
-```
-
----
-
-.discussion[
-What models can you envision for collecting assignments and providing feedback when teaching with RStudio Cloud?
-]
-
-```{r echo=FALSE}
-countdown(minutes = 3)
-```
