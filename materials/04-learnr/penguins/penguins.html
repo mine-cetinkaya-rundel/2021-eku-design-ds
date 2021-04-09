@@ -92,6 +92,7 @@ if (window.hljs) {
 <!-- end tabsets -->
 
 
+<link rel="stylesheet" href="css/font-size.css" type="text/css" />
 
 </head>
 
@@ -155,6 +156,17 @@ library(palmerpenguins)</code></pre>
 <div id="penguin-colors-answer_container" class="shiny-html-output"></div>
 <div id="penguin-colors-message_container" class="shiny-html-output"></div>
 <div id="penguin-colors-action_button_container" class="shiny-html-output"></div>
+<script>if (Tutorial.triggerMathJax) Tutorial.triggerMathJax()</script>
+</div>
+</div>
+</div>
+<div id="section-text-questions" class="section level2">
+<h2>Text questions</h2>
+<div class="panel panel-default">
+<div data-label="text" class="tutorial-question panel-body">
+<div id="text-answer_container" class="shiny-html-output"></div>
+<div id="text-message_container" class="shiny-html-output"></div>
+<div id="text-action_button_container" class="shiny-html-output"></div>
 <script>if (Tutorial.triggerMathJax) Tutorial.triggerMathJax()</script>
 </div>
 </div>
@@ -278,10 +290,7 @@ library(palmerpenguins)</code></pre>
 </div>
 <div id="section-view-data" class="section level3">
 <h3>View data</h3>
-<p>You can view the collected data <a href="https://docs.google.com/spreadsheets/d/1r-brbs_UeajIejgO6c7Jgil8nmSJ0-PI4jkVcPOPmd8/edit?usp=sharing">here</a>.</p>
-<iframe width="900" height="400" src="https://docs.google.com/spreadsheets/d/e/1r-brbs_UeajIejgO6c7Jgil8nmSJ0-PI4jkVcPOPmd8/pubhtml?gid=1064275118&amp;single=true&amp;widget=true&amp;headers=false">
-</iframe>
-
+You can view the collected data <a href="https://docs.google.com/spreadsheets/d/1r-brbs_UeajIejgO6c7Jgil8nmSJ0-PI4jkVcPOPmd8/edit?usp=sharing">here</a>. 
 <script type="application/shiny-prerendered" data-context="server-start">
 # packages
 
@@ -386,20 +395,20 @@ learnr:::store_exercise_cache("load-package", list(setup = NULL, chunks = list(l
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "awesome-penguins", 
     question = structure("How awesome are penguins?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_ea08d21", 
+    "character")), answers = list(structure(list(id = "lnr_ans_5b70de7", 
         option = "Super awesome!", value = "Super awesome!", 
         label = structure("Super awesome!", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_64d9582", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5f66cbd", 
         option = "Awesome", value = "Awesome", label = structure("Awesome", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b9d5f0d", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_f65cadf", 
         option = "Meh", value = "Meh", label = structure("Meh", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5524ac3", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b080437", 
         option = "Not awesome", value = "Not awesome", label = structure("Not awesome", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_20ad2d6", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_7f620e", 
         option = "Super not awesome", value = "Super not awesome", 
         label = structure("Super not awesome", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
@@ -412,23 +421,23 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
         answer = "awesome-penguins-answer", question = "awesome-penguins"), 
     loading = structure("<strong>Loading:<\u002fstrong> \nHow awesome are penguins?\n<br/><br/><br/>", html = TRUE, class = c("html", 
     "character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 1450311979.32465, options = list()), class = c("learnr_radio", 
+    seed = 1869873578.62927, options = list()), class = c("learnr_radio", 
 "tutorial_question")))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "penguin-colors", 
     question = structure("Penguins are which of the following colors?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_20c9de4", 
+    "character")), answers = list(structure(list(id = "lnr_ans_e176fa8", 
         option = "Black", value = "Black", label = structure("Black", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_2f5c13f", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a26de7b", 
         option = "White", value = "White", label = structure("White", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_48cce89", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d043c8a", 
         option = "Magenta", value = "Magenta", label = structure("Magenta", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_bd6646c", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_acc1f1f", 
         option = "Cyan", value = "Cyan", label = structure("Cyan", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
     "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -440,8 +449,38 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
         answer = "penguin-colors-answer", question = "penguin-colors"), 
     loading = structure("<strong>Loading:<\u002fstrong> \nPenguins are which of the following colors?\n<br/><br/><br/>", html = TRUE, class = c("html", 
     "character")), random_answer_order = FALSE, allow_retry = FALSE, 
-    seed = 281829192.868763, options = list()), class = c("learnr_radio", 
+    seed = 215262087.399761, options = list()), class = c("learnr_radio", 
 "tutorial_question")))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_text", label = "text", question = structure("Please enter the word &#39;Penguin&#39; below:", html = TRUE, class = c("html", 
+"character")), answers = list(structure(list(id = "lnr_ans_9e09295", 
+    option = "penguin", value = "penguin", label = structure("penguin", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = structure("Don&#39;t forget to capitalize", html = TRUE, class = c("html", 
+    "character"))), class = c("tutorial_question_answer", "tutorial_quiz_answer"
+)), structure(list(id = "lnr_ans_94300ac", option = "pEnguin", 
+    value = "pEnguin", label = structure("pEnguin", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = structure("Did you capitalize properly?", html = TRUE, class = c("html", 
+    "character"))), class = c("tutorial_question_answer", "tutorial_quiz_answer"
+)), structure(list(id = "lnr_ans_70cc003", option = "Penguin ", 
+    value = "Penguin ", label = structure("Penguin ", html = TRUE, class = c("html", 
+    "character")), correct = FALSE, message = structure("Make sure you do not have a trailing space", html = TRUE, class = c("html", 
+    "character"))), class = c("tutorial_question_answer", "tutorial_quiz_answer"
+)), structure(list(id = "lnr_ans_348e9fe", option = "Penguin", 
+    value = "Penguin", label = structure("Penguin", html = TRUE, class = c("html", 
+    "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", 
+"tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
+"character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
+"character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html", 
+"character")), try_again = structure("Incorrect", html = TRUE, class = c("html", 
+"character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
+"character")), message = NULL, post_message = NULL), ids = list(
+    answer = "text-answer", question = "text"), loading = structure("<strong>Loading:<\u002fstrong> \nPlease enter the word &#39;Penguin&#39; below:\n<br/><br/><br/>", html = TRUE, class = c("html", 
+"character")), random_answer_order = FALSE, allow_retry = TRUE, 
+    seed = 1275215819.90618, options = list(placeholder = "Enter answer here...", 
+        trim = FALSE)), class = c("learnr_text", "tutorial_question"
+)))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">

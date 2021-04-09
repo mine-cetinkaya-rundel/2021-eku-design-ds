@@ -85,6 +85,21 @@ question(
 )
 ```
 
+## Text questions
+
+```{r text}
+question_text(
+  "Please enter the word 'Penguin' below:",
+  answer("penguin", message = "Don't forget to capitalize"),
+  answer("pEnguin", message = "Did you capitalize properly?"),
+  answer("Penguin ", message = "Make sure you do not have a trailing space"),
+  answer("Penguin", correct = TRUE),
+  allow_retry = TRUE,
+  trim = FALSE
+)
+```
+
+
 ## Code exercises
 
 Create a frequency table of the species of penguins on Biscoe island, and display the results in descending order of frequency.
