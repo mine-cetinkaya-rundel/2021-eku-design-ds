@@ -4,6 +4,7 @@ output:
   learnr::tutorial:
     progressive: true
     allow_skip: true
+    css: "css/font-size.css"
 runtime: shiny_prerendered
 ---
 
