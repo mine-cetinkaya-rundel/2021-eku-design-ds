@@ -34,8 +34,6 @@ The RStudio Cloud workspace is at  [bit.ly/design-ds-eku](https://bit.ly/design-
 
 ### Day 2 - Friday, April 9
 
-**Topics for Day 2 are tentative and materials will be posted prior to Day 2**
-
 | Time          | Activity         |
 | :------------ | :--------------- |
 | 13:30 - 13:40 | Welcome + recap  |
