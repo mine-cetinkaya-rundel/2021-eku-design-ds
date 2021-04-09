@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>05   reproducible computing</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="dr. mine çetinkaya-rundel" />
+    <meta name="date" content="2021-04-09" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="../slides-style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 05 <br> reproducible computing
+## 👯 with R Markdown, Git, and GitHub <br> 🔗 <a href="http://bit.ly/design-ds-eku-web">bit.ly/design-ds-eku-web</a>
+### dr. mine çetinkaya-rundel
+### 9 april 2021
+
+---
+
+
+
+
+class: middle, inverse
+
+# Reproducibility in the classroom
+
+---
+
+## Reproducibility checklist
+
+- Are the tables and figures reproducible from the code and data?
+- Does the code actually do what you think it does?
+- In addition to what was done, is it clear *why* it was done? (e.g., how 
+were parameter settings chosen?)
+- Can the code be used for other data?
+- Can you extend the code to do other things?
+
+---
+
+## Ambitious goal + many other concerns 
+
+We need an environment where
+
+- data, analysis, and results are tightly connected, or better yet, 
+inseparable
+
+- reproducibility is built in
+    + the original data remains untouched
+    + all data manipulations and analyses are inherently documented
+
+- documentation is human readable and syntax is minimal
+
+---
+
+## Roadmap
+
+1. Scriptability `\(\rightarrow\)` R
+
+2. Literate programming `\(\rightarrow\)` R Markdown
+
+3. Version control `\(\rightarrow\)` Git / GitHub
+
+---
+
+## Why R Markdown?
+
+- **Reproducibility:** Train new analysts whose only workflow is a reproducible one
+- **Pedagogy:**
+  - Code + output + prose together
+  - Syntax highlighting FTW!
+- **Efficiency:** Consistent formatting -&gt; easier grading
+
+---
+
+## Tips for starting with R Markdown
+
+- Minimal YAML
+- Minimal chunk options
+- Use well scaffolded R Markdown documents
+- Knit early and often
+- New: Use the visual editor!
+
+---
+
+## Why Git + GitHub?
+
+- **Version control:** Lots of mistakes along the way, need ability to revert
+- **Collaboration:** Platform that removes barriers to well documented collaboration
+- **Accountability:** Transparent commit history
+- **Early introduction:** 
+  - Mastery takes time, earlier start the better
+  - Marketability
+
+---
+
+## Goals for version control with Git / GitHub
+
+- Centralize the distribution and collection of all student assignments
+
+- Enable students to work collaboratively
+
+- Force students to use git &amp; GitHub
+  - Version control is a best practice for reproducible research
+  - Widely used in industry 
+  - Publish / share work
+
+---
+
+class: middle, inverse
+
+# GitHub as your Learning Management System
+
+---
+
+## Basic Structure
+
+On Github
+
+- 1 Organization / class
+
+- 1 repo / (student or team) / assignment
+
+- Student and team repos all private by default
+
+---
+
+## Setting up a course
+
+1. Create course organization on GitHub (https://github.com/organizations/new)
+1. Request education discount for organization (https://education.github.com/discount)
+1. Invite students to organization
+1. Create assignment(s)
+1. Collect assignments(s)
+1. Grade assignment(s)
+
+---
+
+## Required information
+
+When requesting the discount you will need to provide the following:
+
+- A brief description of the purpose for the GitHub organization and how you plan to use GitHub
+
+- Establishing connection to an academic institution by verifying with an `.edu` email + photo of your school id.
+
+- Link to relevant website for the class / workshop / research group
+
+- Verification is manual and can take between a couple hours to a couple days.
+
+---
+
+## Demo
+
+- What does a course organization look like?
+- What does a starter repo look like?
+- What does submitted student work look like?
+- How do we facilitate creating student repositories and other repeated interctions?
+
+---
+
+## 📦 ghclass
+
+### Tools for managing github class organization accounts
+
+- Made for instructors who use GitHub for class management, e.g. students submit assignments via GitHub repos
+- The package assumes that you’re an R user, and you probably teach R as well, though that’s not a requirement since this package is all about setting up repositories with the right permissions, not what your students put in those repositories.
+- The package is still under active development and is not currently on CRAN but can be installed from GitHub using:
+
+
+```r
+devtools::install_github("rundel/ghclass")
+```
+
+
+```r
+library(ghclass)
+```
+
+---
+
+## Options for giving feedback on GitHub
+
+- Use the GitHub UI to add issues to each student's repo
+
+- Clone student repos locally and reproduce their work prior to giving feedback by adding issues on the GitHub UI
+
+
+```r
+hw01_repos &lt;- org_repos(org, "hw-01-airbnb-edi-")
+local_repo_clone(hw01_repos, 
+                 local_path = "hw01_submissions")
+```
+
+- Use the `issue_create()` function to post issues to all repos at once
+  - Create a data frame based on your roster
+  - Add a column for the repo name in `org/repo` format to roster
+  - Add a column for feedback
+  
+---
+
+## Get big picture stats for an assignment
+
+
+```r
+org_repo_stats(org, filter = "hw-01-airbnb-edi-")
+```
+
+---
+
+## Peer review
+
+- Once an assignment is completed you can let other students/teams into a repository and they can provide peer review.
+
+- Peer review is an incredibly effective learning experience for both the reviewers and the reviewees, however it does require coordination and being able to carve out sufficient time in the course schedule.
+
+- Tip: Do not solely count on peer review for feedback as some reviewers might be less diligent than others. Teams reviewing teams, as opposed to individual reviewing individuals, might address this issue partially.
+
+See the [Peer review with ghclass vignette](https://rundel.github.io/ghclass/articles/peer.html) for more.
+
+---
+
+## Git + GitHub lessons learned
+
+- If you plan on using git in class, start on day one, don't wait until the "right time"
+- First assignment should be individual, not team based to avoid merge conflicts
+- Students need to remember to pull before starting work
+- Impossible (?) to avoid shell intervention every once in a while
+- Remind students on that future projects should go on GitHub with PI approval
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

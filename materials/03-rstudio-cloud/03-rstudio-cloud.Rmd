@@ -1,5 +1,5 @@
 ---
-title: "03 <br> > computing infrastructure"
+title: "03 <br> computing infrastructure"
 subtitle: "`r emo::ji('dizzy')` with RStudio Cloud! <br> `r emo::ji('link')` [bit.ly/design-ds-eku-web](http://bit.ly/design-ds-eku-web)"
 author: "dr. mine çetinkaya-rundel"
 date: "9 april 2021"

@@ -1,5 +1,5 @@
 ---
-title: "04 <br> > interactivity and immediate feedback"
+title: "04 <br> interactivity and immediate feedback"
 subtitle: "`r emo::ji('dizzy')` with learnr <br> `r emo::ji('link')` [bit.ly/design-ds-eku-web](http://bit.ly/design-ds-eku-web)"
 author: "dr. mine çetinkaya-rundel"
 date: "9 april 2021"
@@ -42,11 +42,6 @@ set.seed(1234)
 
 # packages
 library(countdown)
-library(tidyverse)
-library(broom)
-library(scales)
-library(openintro)
-library(jsonlite)
 ```
 
 .huge-text[you...]
