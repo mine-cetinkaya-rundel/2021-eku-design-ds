@@ -255,9 +255,9 @@ devtools::install_github("rstudio-education/gradethis")
 .huge-text[demo]
 
 .large[
-[**`[tutorial]`**](https://rstudio-education.github.io/dsbox/tutorials/01-basics.html) 
+[**`[tutorial]`**](https://minecr.shinyapps.io/penguins) 
 
-[**`[code]`**](https://github.com/rstudio-education/dsbox/blob/master/inst/tutorials/01-edibnb/01-edibnb.Rmd)
+[**`[code]`**](https://github.com/mine-cetinkaya-rundel/2021-eku-design-ds/blob/master/materials/04-learnr/penguins/penguins.Rmd)
 ]
 
 ---
@@ -272,7 +272,7 @@ class: middle, inverse
 
 ```{r eval=FALSE}
 ---
-title: "Airbnb listings in Edinburgh"
+title: "Palmer penguins"
 output: 
   learnr::tutorial:
     progressive: true
@@ -292,13 +292,13 @@ runtime: shiny_prerendered
 
 - You can change the style of your learnr tutorial
 - You might, at a minimum, implement a couple customizations for accessibility:
-  - Increase font size in the narrative, using a [CSS file](https://github.com/rstudio-education/dsbox/blob/master/inst/tutorials/01-edibnb/css/font-size.css) that lives in a directory called `css/` and loaded in the YAML with
+  - Increase font size in the narrative, using a [CSS file](https://github.com/mine-cetinkaya-rundel/2021-eku-design-ds/blob/master/materials/04-learnr/penguins/css/font-size.css) that lives in a directory called `css/` and loaded in the YAML with
 
 ```{r eval=FALSE}
 css: "css/font-size.css"
 ```
 
-  - Increase font size in code boxes, using a [JS file](https://github.com/rstudio-education/dsbox/blob/master/inst/tutorials/01-edibnb/js/exercise-font-size.js) that lives in a directory called `js/` and loaded with 
+  - Increase font size in code boxes, using a [JS file](https://github.com/mine-cetinkaya-rundel/2021-eku-design-ds/blob/master/materials/04-learnr/penguins/js/exercise-font-size.js) that lives in a directory called `js/` and loaded with 
   
 ```{r eval=FALSE}
 <script language="JavaScript" src="js/exercise-font-size.js"></script>
@@ -315,11 +315,12 @@ css: "css/font-size.css"
 ```{r eval=FALSE}
 ### Learning goals
 
-The goal of this tutorial is not to conduct a thorough analysis of Airbnb listings in Edinburgh, but instead to give you a chance to practice your data visualisation and interpretation skills.
+- Practice developing exercises with learnr.
+- Practice writing code checking tests with gradethis.
 
 ### Packages
 
-We will use the **tidyverse** package for this analysis and the **dsbox** package for the data. Run the following code to load this package.
+In this assignment we will work with the **palmerpenguins** and **tidyverse** packages. So let's go ahead and load them!
 ```
 
 ---
@@ -327,14 +328,14 @@ We will use the **tidyverse** package for this analysis and the **dsbox** packag
 ## Multiple choice questions
 
 ```{r eval=FALSE}
-question("What does each row in the `edibnb` dataset represent?",
-    answer("The values of a certain variable"),
-    answer("An individual Airbnb listing",
-           correct = TRUE,
-           message = "Each row in the dataset contains one observation of each field, each relating to a single Airbnb listing."),
-    answer("An Airbnb booking"),
-    answer("An Edinburgh neighbourhood")
-  )
+question(
+  "How awesome are penguins?",
+  answer("Super awesome!", correct = TRUE),
+  answer("Awesome"),
+  answer("Meh"),
+  answer("Not awesome"),
+  answer("Super not awesome")
+)
 ```
 
 ---
@@ -343,12 +344,11 @@ question("What does each row in the `edibnb` dataset represent?",
 
 ```{r eval=FALSE}
 question_text(
-  "Please enter the word 'C0rrect' below:",
-  answer("correct", message = "Don't forget to capitalize"),
-  answer("c0rrect", message = "Don't forget to capitalize"),
-  answer("Correct", message = "Is it really an 'o'?"),
-  answer("C0rrect ", message = "Make sure you do not have a trailing space"),
-  answer("C0rrect", correct = TRUE),
+  "Please enter the word 'Penguin' below:",
+  answer("penguin", message = "Don't forget to capitalize"),
+  answer("pEnguin", message = "Did you capitalize properly?"),
+  answer("Penguin ", message = "Make sure you do not have a trailing space"),
+  answer("Penguin", correct = TRUE),
   allow_retry = TRUE,
   trim = FALSE
 )
@@ -360,7 +360,7 @@ question_text(
 *Recommend one person in each group share their screen and everyone work together to work through the document.*
 
 - Go to RStudio Cloud
-- Start the assignment titled `Interactive tutorials`
+- Start the assignment titled `04 - Interactive tutorials`
 - Open `penguins.Rmd` and click on **Run Document**
 - Read the instructions under `Multiple choice questions`
 - See help for `?question` and `?quiz` and don't hesitate to call for help!
@@ -368,34 +368,6 @@ question_text(
 
 ```{r echo=FALSE}
 countdown(minutes = 10)
-```
-
----
-
-## Code exercises - rendered
-
-```{r echo=FALSE, out.width="85%", fig.align="center"}
-knitr::include_graphics("img/learnr-exercise-hints.png")
-```
-
----
-
-## Code exercises - code
-
-```{r echo=FALSE, out.width="75%", fig.align="center"}
-knitr::include_graphics("img/learnr-exercise-code.png")
-```
-
----
-
-## Code exercises - solution
-
-```{r echo=FALSE, out.width="85%", fig.align="center"}
-knitr::include_graphics("img/learnr-exercise-submit.png")
-```
-
-```{r echo=FALSE, out.width="80%", fig.align="center"}
-knitr::include_graphics("img/learnr-exercise-solution.png")
 ```
 
 ---
@@ -423,11 +395,19 @@ class: middle, inverse
   
 ---
 
+## Code exercises - demo
+
+- Go to RStudio Cloud
+- Start the assignment titled `Interactive tutorials`
+- Open `penguins.Rmd` and click on **Run Document**
+
+---
+
 .your-turn[
 *Recommend one person in each breakout room share their screen and everyone work together.*
 
 - Go to RStudio Cloud
-- In the assignment titled `Interactive tutorials`, open `penguins.Rmd` and click on **Run Document**
+- In the assignment titled `04 - Interactive tutorials`, open `penguins.Rmd` and click on **Run Document**
 - Read the instructions under `Code exercises`
 - Write more hints and code checking tests 
 ]
@@ -445,7 +425,6 @@ countdown(minutes = 15)
 - Use setup chunks to make the tutorial experience feel more like a data analysis story
 
 - Leverage this feature to write robust code and checks
-
 
 ---
 
@@ -502,7 +481,7 @@ devtools::install_github("rundel/learnrhash")
 <br>
 
 .large[
-[**`[example]`**](https://minecr.shinyapps.io/feedback-at-scale)
+[**`[example]`**](https://minecr.shinyapps.io/penguins/#section-submit)
 ]
 
 .footnote[
