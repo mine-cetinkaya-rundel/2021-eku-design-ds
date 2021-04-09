@@ -46,7 +46,7 @@ feedback_hw_01 <- feedback_hw_01 %>%
   )
 
 issue_create(
-  repo  = paste0("hw-01-", roster$github_name),
+  repo  = paste0("ghclass-demo/hw-01-", roster$github_name),
   title = "HW 01 Feedback",
   body  =  feedback_hw_01$issue_text
 )
