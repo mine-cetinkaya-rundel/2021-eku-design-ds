@@ -28,9 +28,8 @@ The RStudio Cloud workspace is at  [bit.ly/design-ds-eku](https://bit.ly/design-
 | :------------ | :--------------- |
 | 08:45 - 09:00 | Welcome  |
 | 09:00 - 10:00 | [Curriculum design](https://mine-cetinkaya-rundel.github.io/2021-eku-design-ds/materials/01-curriculum-design/01-curriculum-design.html) |
-| 10:00 - 10:15 | :coffee: *Break*   |
-| 10:15 - 11:00 | [Teaching the tidyverse](https://mine-cetinkaya-rundel.github.io/2021-eku-design-ds/materials/02-teach-tidyverse/02-teach-tidyverse.html) |
-| 11:00 - 11:45 | Computing infrastructure with RStudio Cloud |
+| 10:45 - 11:00 | :coffee: *Break*   |
+| 11:00 - 11:45 | [Teaching the tidyverse](https://mine-cetinkaya-rundel.github.io/2021-eku-design-ds/materials/02-teach-tidyverse/02-teach-tidyverse.html) |
 
 ### Day 2 - Friday, April 9
 
