@@ -9,21 +9,19 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 # packages
+
+# devtools::install_github("rstudio/learnr")
 library(learnr)
-library(tidyverse)
 #devtools::install_github("rstudio-education/gradethis")
 library(gradethis)
 #devtools::install_github("rundel/learnrhash")
 library(learnrhash)
+
+library(tidyverse)
 library(palmerpenguins)
 
-# tutorial options
-tutorial_options(
-  # code running in exercise times out after 30 seconds
-  exercise.timelimit = 30, 
-  # use gradethis for checking
-  exercise.checker = gradethis::grade_learnr
-  )
+# set options for exercises and checking
+gradethis_setup()
 
 # hide non-exercise code chunks
 knitr::opts_chunk$set(echo = FALSE)
@@ -125,3 +123,37 @@ grade_this({
   fail(message = "Not quite! ___")
 })
 ```
+
+## Submit
+
+### 
+
+```{r context="server"}
+learnrhash::encoder_logic(strip_output = TRUE)
+```
+
+```{r encode, echo=FALSE}
+learnrhash::encoder_ui(
+  ui_before = div(strong("Once you're done with your quiz, click on Generate Submission below and copy the hash generated and paste it in the form below."), br(), br()),
+  ui_after  = learnrhash::iframe_ui(
+    src = "https://docs.google.com/forms/d/e/1FAIpQLSfHTu4SXGF9pK5WH6gd0AqA4b8m8wOuvuPB-pSEkexqEaZy2w/viewform?embedded=true",
+    width="700px", height= "1000px"
+  )
+)
+```
+
+### Decode hash
+
+The following would not be included in a student facing tutorial, but has been included here to demonstrate the decoding functionality of the [**learnrhash**](https://github.com/rundel/learnrhash) package. 
+
+```{r context="server"}
+learnrhash::decoder_logic()
+```
+
+```{r decode, echo=FALSE}
+learnrhash::decoder_ui()
+```
+
+### View data
+
+You can view the collected data [here](https://docs.google.com/spreadsheets/d/1r-brbs_UeajIejgO6c7Jgil8nmSJ0-PI4jkVcPOPmd8/edit?usp=sharing).
