@@ -40,10 +40,10 @@ The RStudio Cloud workspace is at  [bit.ly/design-ds-eku](https://bit.ly/design-
 | :------------ | :--------------- |
 | 13:30 - 13:40 | Welcome + recap  |
 | 13:40 - 14:30 | [Computing infrastructure with RStudio Cloud](https://mine-cetinkaya-rundel.github.io/2021-eku-design-ds/materials/03-rstudio-cloud/03-rstudio-cloud.html) |
-| 14:30 - 15:15 | [Interactivity and immediate feedback]() |
+| 14:30 - 15:15 | [Interactivity and immediate feedback](https://mine-cetinkaya-rundel.github.io/2021-eku-design-ds/materials/04-learnr/04-learnr.html) |
 | 15:15 - 15:30 | :coffee: *Break*   |
 | 15:30 - 16:15 | [Reproducible workflows: R Markdown, Git, and GitHub]() |
-| 16:15 - 16:30 | [Wrap up]( |
+| 16:15 - 16:30 | [Wrap up]() |
 
 ## Instructor
 
